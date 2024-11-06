@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display JSON Table</title>
+</head>
+<body>
+
+    <!-- Div to display the table -->
+    <div id="table-container"></div>
+
+    <!-- Load your JavaScript module -->
+    <script type="module">
+        import json2html from './json2html.js';
+
+        // Sample data to test the function
+        const data = [
+            { Name: "Alice", Age: 25, Gender: "F" },
+            { Name: "Bob", Age: 30, Gender: "M" },
+            { Name: "Charlie", Age: 35, Gender: "M" }
+        ];
+
+        // Generate HTML table string and display it in the container
+        const tableHTML = json2html(data);
+        document.getElementById('table-container').innerHTML = tableHTML;
+    </script>
+</body>
+</html>
