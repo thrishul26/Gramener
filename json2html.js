@@ -1,4 +1,3 @@
-// json2html.js
 export default function json2html(data) {
     let html = `<table data-user="thrishulkothapally26@gmail.com">
                     <thead>
@@ -7,9 +6,9 @@ export default function json2html(data) {
                     <tbody>`;
 
     data.forEach(item => {
-        html += <tr><td>${item.Name || ''}</td><td>${item.Age || ''}</td><td>${item.Gender || ''}</td></tr>;
+        html += `<tr><td>${item.Name || ''}</td><td>${item.Age || ''}</td><td>${item.Gender || ''}</td></tr>`;
     });
 
-    html += </tbody></table>;
-   return html;
+    html += `</tbody></table>`;
+    return html;
 }
